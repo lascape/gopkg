@@ -13,8 +13,14 @@ type Model struct {
 
 type Dict map[string]interface{}
 
-func NewDict() Dict {
-	return make(Dict)
+func NewDict(v interface{}) Dict {
+	d := make(Dict)
+	marshal, err := json.Marshal(v)
+	if err != nil {
+		return d
+	}
+	_ = json.Unmarshal(marshal, &d)
+	return d
 }
 
 func (d Dict) Value() (driver.Value, error) {

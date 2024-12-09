@@ -28,7 +28,7 @@ func NewWithRequest(req *http.Request, uri string) *Client {
 }
 
 func New(uri string) *Client {
-	return &Client{req: &http.Request{}, uri: uri, startTime: time.Now(), errs: &strings.Builder{}}
+	return &Client{req: &http.Request{Header: make(http.Header)}, uri: uri, startTime: time.Now(), errs: &strings.Builder{}}
 }
 
 func (h *Client) MustCode(code int) *Client {
