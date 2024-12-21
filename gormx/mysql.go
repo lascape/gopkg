@@ -58,7 +58,7 @@ type Config struct {
 func Must(opts ...Option) *gorm.DB {
 	db, err := mustDb(opts...)
 	if err != nil {
-		logrus.Error(err)
+		logrus.Panic(err)
 	}
 	return db
 }

@@ -51,8 +51,7 @@ func WithConfig(conf Config) Option {
 func Must(opts ...Option) *redis.Client {
 	client, err := must(opts...)
 	if err != nil {
-		logrus.Error(err)
-		return nil
+		logrus.Panic(err)
 	}
 	return client
 }

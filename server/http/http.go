@@ -2,6 +2,7 @@ package httpServer
 
 import (
 	"context"
+	"github.com/sirupsen/logrus"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -27,5 +28,6 @@ func (s *Server) Use(middleware ...gin.HandlerFunc) {
 
 func (s *Server) Start() {
 	if err := s.server.ListenAndServe(); err != nil {
+		logrus.Panic(err)
 	}
 }
