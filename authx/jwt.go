@@ -2,7 +2,6 @@ package authx
 
 import (
 	"github.com/golang-jwt/jwt/v5"
-	_ "github.com/golang-jwt/jwt/v5"
 	"github.com/lascape/gopkg/envx"
 	"github.com/pkg/errors"
 	"time"

@@ -16,7 +16,7 @@ func TestGenerateToken(t *testing.T) {
 	}{
 		{
 			name:   "jwt success",
-			method: AuthNameJwt,
+			method: NameJwt,
 			kv: map[string]interface{}{
 				"username": "admin",
 				"password": "admin",
@@ -26,7 +26,7 @@ func TestGenerateToken(t *testing.T) {
 		},
 		{
 			name:   "jwt expired token",
-			method: AuthNameJwt,
+			method: NameJwt,
 			kv: map[string]interface{}{
 				"username": "admin",
 				"password": "admin",
