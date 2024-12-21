@@ -6,11 +6,11 @@ import (
 )
 
 const (
-	AuthNameJwt = "jwt"
+	NameJwt = "jwt"
 )
 
 func init() {
-	RegisterAuth(AuthNameJwt, &JWT{})
+	RegisterAuth(NameJwt, &JWT{})
 }
 
 type manager struct {

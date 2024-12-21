@@ -9,6 +9,7 @@ type Model struct {
 	ID        int64 `json:"id" gorm:"primarykey,column:id" form:"id"`
 	CreatedAt int64 `json:"created_at" gorm:"column:created_at" form:"created_at"`
 	UpdatedAt int64 `json:"updated_at" gorm:"column:updated_at" form:"updated_at"`
+	DeletedAt int64 `json:"deleted_at" gorm:"column:deleted_at" form:"updated_at"`
 }
 
 type Dict map[string]interface{}
