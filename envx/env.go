@@ -26,6 +26,10 @@ func (v Value) String() string {
 	return string(v)
 }
 
+func (v Value) Bytes() []byte {
+	return []byte(v)
+}
+
 func (v Value) Bool() bool {
 	return string(v) == "true"
 }
